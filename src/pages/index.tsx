@@ -1,11 +1,28 @@
 import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
 
+const headerTitle = {
+  fontFamily: "Gilda Display, serif",
+  fontSize: 24,
+  fontWeight: 400,
+  fontStyle:  "normal",
+}
+
+const titleStyle = {
+  ...headerTitle,
+  fontSize: 80,
+  maxWidth: 820,
+  textTransform: "uppercase",
+  fontWeight: 600,
+}
+
 const pageStyles = {
   color: "#232129",
   padding: 96,
+  paddingTop: 12,
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
 }
+
 const headingStyles = {
   marginTop: 0,
   marginBottom: 64,
@@ -14,12 +31,15 @@ const headingStyles = {
   fontWeight: 600,
   color: "#1099A8",
 }
+
 const headingAccentStyles = {
   color: "#663399",
 }
+
 const paragraphStyles = {
   marginBottom: 48,
 }
+
 const codeStyles = {
   color: "#8A6534",
   padding: 4,
@@ -41,15 +61,34 @@ const listItemStyles = {
   marginBottom: 30,
 }
 
-const linkStyle = {
+const tinyText = {
+  color: "black",
+  fontSize: 14,
+}
+
+const tinyLinkStyle = {
   color: "#8954A8",
   fontWeight: "bold",
-  fontSize: 16,
+  fontSize: 13,
   verticalAlign: "5%",
 }
 
+const footerStyle = {
+  color: "#273846",
+  backgroundColor: "#FAF6F0",
+  width: "100%",
+  height: "300px",
+  paddingLeft: 96,
+  paddingRight: 96,
+  paddingTop: 24,
+  paddingBottom: 24,
+  display: "flex",
+  alignItems: "flex-end",
+  marginTop: 180,
+}
+
 const docLinkStyle = {
-  ...linkStyle,
+  ...tinyLinkStyle,
   listStyleType: "none",
   display: `inline-block`,
   marginBottom: 24,
@@ -119,45 +158,56 @@ const links = [
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
-    <main style={pageStyles}>
-      <h1 style={headingStyles}>
-        Stjepanka Pranjkovic
-      </h1>
-      <p style={paragraphStyles}>
-        Pod <code style={codeStyles}>konstrukcijom</code>
-      </p>
-      {/*<ul style={doclistStyles}>*/}
-      {/*  {docLinks.map(doc => (*/}
-      {/*    <li key={doc.url} style={docLinkStyle}>*/}
-      {/*      <a*/}
-      {/*        style={linkStyle}*/}
-      {/*        href={doc.url}*/}
-      {/*      >*/}
-      {/*        {doc.text}*/}
-      {/*      </a>*/}
-      {/*    </li>*/}
-      {/*  ))}*/}
-      {/*</ul>*/}
-      {/*<ul style={listStyles}>*/}
-      {/*  {links.map(link => (*/}
-      {/*    <li key={link.url} style={{ ...listItemStyles, color: link.color }}>*/}
-      {/*      <span>*/}
-      {/*        <a*/}
-      {/*          style={linkStyle}*/}
-      {/*          href={link.url}*/}
-      {/*        >*/}
-      {/*          {link.text}*/}
-      {/*        </a>*/}
-      {/*        /!*{link.badge && (*!/*/}
-      {/*        /!*  <span style={badgeStyle} aria-label="New Badge">*!/*/}
-      {/*        /!*    NEW!*!/*/}
-      {/*        /!*  </span>*!/*/}
-      {/*        /!*)}*!/*/}
-      {/*        <p style={descriptionStyle}>{link.description}</p>*/}
-      {/*      </span>*/}
-      {/*    </li>*/}
-      {/*  ))}*/}
-      {/*</ul>*/}
+    <main >
+      <div style={pageStyles}>
+        <header style={headerTitle}>mimesis</header>
+        <h1 style={titleStyle}>
+          Welcome to Stjepanka's blog!
+        </h1>
+        <p style={paragraphStyles}>Discover the world of Stjepanka Pranjkovic through her personal blog, featuring insights, projects, and contact information.</p>
+        <p style={paragraphStyles}>
+          <code style={codeStyles}>Coming soon</code>
+        </p>
+        {/*<ul style={doclistStyles}>*/}
+        {/*  {docLinks.map(doc => (*/}
+        {/*    <li key={doc.url} style={docLinkStyle}>*/}
+        {/*      <a*/}
+        {/*        style={linkStyle}*/}
+        {/*        href={doc.url}*/}
+        {/*      >*/}
+        {/*        {doc.text}*/}
+        {/*      </a>*/}
+        {/*    </li>*/}
+        {/*  ))}*/}
+        {/*</ul>*/}
+        {/*<ul style={listStyles}>*/}
+        {/*  {links.map(link => (*/}
+        {/*    <li key={link.url} style={{ ...listItemStyles, color: link.color }}>*/}
+        {/*      <span>*/}
+        {/*        <a*/}
+        {/*          style={linkStyle}*/}
+        {/*          href={link.url}*/}
+        {/*        >*/}
+        {/*          {link.text}*/}
+        {/*        </a>*/}
+        {/*        /!*{link.badge && (*!/*/}
+        {/*        /!*  <span style={badgeStyle} aria-label="New Badge">*!/*/}
+        {/*        /!*    NEW!*!/*/}
+        {/*        /!*  </span>*!/*/}
+        {/*        /!*)}*!/*/}
+        {/*        <p style={descriptionStyle}>{link.description}</p>*/}
+        {/*      </span>*/}
+        {/*    </li>*/}
+        {/*  ))}*/}
+        {/*</ul>*/}
+        {/*<span style={tinyText}>*/}
+        {/*  Build by <a href="https://www.github.com/vjekooo" target="_blank" style={tinyLinkStyle}>Vjeko 🛠️</a>*/}
+        {/*</span>*/}
+      </div>
+      <footer style={footerStyle}>
+        <div></div>
+        <p>© 2024 Stjepanka Pranjkovic</p>
+      </footer>
     </main>
   )
 }
