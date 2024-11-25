@@ -161,10 +161,10 @@ const IndexPage: React.FC<PageProps> = () => {
     <main >
       <div style={pageStyles}>
         <header style={headerTitle}>mimesis</header>
-        <h1 style={titleStyle}>
-          Welcome to Stjepanka's blog!
-        </h1>
-        <p style={paragraphStyles}>Discover the world of Stjepanka Pranjkovic through her personal blog, featuring insights, projects, and contact information.</p>
+        {/*<h1 style={titleStyle}>*/}
+        {/*  Welcome to Stjepanka's blog!*/}
+        {/*</h1>*/}
+        {/*<p style={paragraphStyles}>Discover the world of Stjepanka Pranjkovic through her personal blog, featuring insights, projects, and contact information.</p>*/}
         <p style={paragraphStyles}>
           <code style={codeStyles}>Coming soon</code>
         </p>
@@ -206,7 +206,7 @@ const IndexPage: React.FC<PageProps> = () => {
       </div>
       <footer style={footerStyle}>
         <div></div>
-        <p>© 2024 Stjepanka Pranjkovic</p>
+        <p>© 2024 mimesis</p>
       </footer>
     </main>
   )
