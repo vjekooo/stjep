@@ -67,12 +67,12 @@ const descriptionStyle = {
 const docLinks = [
   {
     text: "Jedan Link",
-    url: "https://www.gatsbyjs.com/docs/how-to/custom-configuration/typescript/",
+    url: "/",
     color: "#8954A8",
   },
   {
     text: "Drugi Link",
-    url: "https://www.gatsbyjs.com/docs/how-to/local-development/graphql-typegen/",
+    url: "/",
     color: "#8954A8",
   }
 ]
@@ -96,26 +96,25 @@ const badgeStyle = {
 const links = [
   {
     text: "O meni",
-    url: "https://www.gatsbyjs.com/docs/tutorial/getting-started/",
+    url: "/",
     description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
+      "",
     color: "#E95800",
   },
   {
     text: "Projekti",
-    url: "https://www.gatsbyjs.com/docs/how-to/",
+    url: "/",
     description:
-      "Practical step-by-step guides to help you achieve a specific goal. Most useful when you're trying to get something done.",
+      "",
     color: "#1099A8",
   },
   {
     text: "Contact",
-    url: "https://www.gatsbyjs.com/docs/reference/",
+    url: "/",
     description:
-      "Nitty-gritty technical descriptions of how Gatsby works. Most useful when you need detailed information about Gatsby's APIs.",
+      "Kon tak",
     color: "#BC027F",
   },
-
 ]
 
 const IndexPage: React.FC<PageProps> = () => {
@@ -125,44 +124,40 @@ const IndexPage: React.FC<PageProps> = () => {
         Stjepanka Pranjkovic
       </h1>
       <p style={paragraphStyles}>
-        Opis <code style={codeStyles}>prevoditeljica</code> nest nesto 😎
+        Pod <code style={codeStyles}>konstrukcijom</code>
       </p>
-      <ul style={doclistStyles}>
-        {docLinks.map(doc => (
-          <li key={doc.url} style={docLinkStyle}>
-            <a
-              style={linkStyle}
-              href={`${doc.url}?utm_source=starter&utm_medium=ts-docs&utm_campaign=minimal-starter-ts`}
-            >
-              {doc.text}
-            </a>
-          </li>
-        ))}
-      </ul>
-      <ul style={listStyles}>
-        {links.map(link => (
-          <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
-            <span>
-              <a
-                style={linkStyle}
-                href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter-ts`}
-              >
-                {link.text}
-              </a>
-              {/*{link.badge && (*/}
-              {/*  <span style={badgeStyle} aria-label="New Badge">*/}
-              {/*    NEW!*/}
-              {/*  </span>*/}
-              {/*)}*/}
-              <p style={descriptionStyle}>{link.description}</p>
-            </span>
-          </li>
-        ))}
-      </ul>
-      <img
-        alt="Gatsby G Logo"
-        src="data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2a10 10 0 110 20 10 10 0 010-20zm0 2c-3.73 0-6.86 2.55-7.75 6L14 19.75c3.45-.89 6-4.02 6-7.75h-5.25v1.5h3.45a6.37 6.37 0 01-3.89 4.44L6.06 9.69C7 7.31 9.3 5.63 12 5.63c2.13 0 4 1.04 5.18 2.65l1.23-1.06A7.959 7.959 0 0012 4zm-8 8a8 8 0 008 8c.04 0 .09 0-8-8z' fill='%23639'/%3E%3C/svg%3E"
-      />
+      {/*<ul style={doclistStyles}>*/}
+      {/*  {docLinks.map(doc => (*/}
+      {/*    <li key={doc.url} style={docLinkStyle}>*/}
+      {/*      <a*/}
+      {/*        style={linkStyle}*/}
+      {/*        href={doc.url}*/}
+      {/*      >*/}
+      {/*        {doc.text}*/}
+      {/*      </a>*/}
+      {/*    </li>*/}
+      {/*  ))}*/}
+      {/*</ul>*/}
+      {/*<ul style={listStyles}>*/}
+      {/*  {links.map(link => (*/}
+      {/*    <li key={link.url} style={{ ...listItemStyles, color: link.color }}>*/}
+      {/*      <span>*/}
+      {/*        <a*/}
+      {/*          style={linkStyle}*/}
+      {/*          href={link.url}*/}
+      {/*        >*/}
+      {/*          {link.text}*/}
+      {/*        </a>*/}
+      {/*        /!*{link.badge && (*!/*/}
+      {/*        /!*  <span style={badgeStyle} aria-label="New Badge">*!/*/}
+      {/*        /!*    NEW!*!/*/}
+      {/*        /!*  </span>*!/*/}
+      {/*        /!*)}*!/*/}
+      {/*        <p style={descriptionStyle}>{link.description}</p>*/}
+      {/*      </span>*/}
+      {/*    </li>*/}
+      {/*  ))}*/}
+      {/*</ul>*/}
     </main>
   )
 }
